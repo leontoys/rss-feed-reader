@@ -1,34 +1,57 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ItemList from './components/ItemList'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  //Constants
+  const defaultUrl = 'https://feeds.buzzsprout.com/2289931.rss'
+  const proxyUrl = "https://api.allorigins.win/get" //'https://cors-anywhere.herokuapp.com/'  
+
+  //State Variables
+  const [url,setUrl] = useState("")
+  const [items,setItems] = useState([])
+
+  const fetchRSSFeed = async (url)=>{
+    try {
+    //wait for response
+    const response = await fetch(`${proxyUrl}?url=${encodeURIComponent(url)}`)
+    //console.log("response",response)
+    //parse
+    const json = await response.json()
+    //console.log("json",json)
+    //return contents
+    return json.contents    
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const handleClick = async (e)=>{
+    //console.log(url||defaultUrl)
+    //fetch the feed 
+    const contents = await fetchRSSFeed(url||defaultUrl)
+    console.log("contents",contents)
+    //now we need to parse the feed
+    const xml = new window.DOMParser().parseFromString(contents,'application/xml')
+    //console.log("parsed",xml)
+    const items_html = xml.getElementsByTagName("item")//HTML collection
+    //console.log("items",items) - this is HTML collection
+    const items_array = Array.from(items_html)
+    //console.log("items array",items_array)
+    setItems(items_array)//add items
+    //TODO-clean up this - loop through the feeds
+    //for(let i = 0; i < items_array.length; i++){
+    //  console.log(items_array[i].getElementsByTagName("title")[0].textContent)
+    //}
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <h1>RSS Feed Reader</h1>
+        <input type='text' value={url||defaultUrl} onChange={e=>setUrl(e.target.value)}></input>
+        <button type='submit' onClick={handleClick}>Get Feeds</button>
+        <ItemList items={items}/>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
   )
 }
 

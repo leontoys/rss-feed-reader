@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import ItemList from './components/ItemList'
 import './App.css'
-import { pipeline } from '@huggingface/transformers';
 
 function App() {
 
@@ -12,48 +11,7 @@ function App() {
 
   //State Variables
   const [url,setUrl] = useState("")
-  const [items,setItems] = useState([])
- // Initialize the transcription pipeline
- const [transcriber, setTranscriber] = useState(null);  
-
-  //load transcriber on page load
-  useEffect(() => {
-    const loadTranscriber = async () => {
-      try {
-        console.log('Loading transcriber...');
-        const transcriberPipeline = await pipeline(
-          'automatic-speech-recognition',
-          'Xenova/whisper-tiny.en',
-          {
-            enableAdultContentFiltering: true // This is required for Whisper
-          }
-        );
-        setTranscriber(transcriberPipeline);
-        console.log('Transcriber loaded');
-      } catch (error) {
-        console.error('Error loading transcriber:', error);
-      }
-    };
-
-    loadTranscriber();
-  }, []);  
-
-  // Download transcript
-  const downloadTranscript = async (e) => {
-    try {
-      if (!transcriber) {
-        console.error('Transcriber is not loaded yet');
-        return;
-      }
-
-      console.log('Starting transcription...');
-      const output = await transcriber(defaultAudioUrl);
-      console.log('Transcription output:', output);
-    } catch (error) {
-      console.error('Error during transcription:', error);
-      throw error;
-    }
-  };
+  const [items,setItems] = useState([]) 
 
   const fetchRSSFeed = async (url)=>{
     try {
@@ -94,7 +52,7 @@ function App() {
         <h1>RSS Feed Reader</h1>
         <input type='text' value={url||defaultUrl} onChange={e=>setUrl(e.target.value)}></input>
         <button type='submit' onClick={handleClick}>Get Feeds</button>
-        <ItemList items={items} onClick={downloadTranscript}/>
+        <ItemList items={items}/>
       </div>
   )
 }

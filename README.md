@@ -1,12 +1,27 @@
-# React + Vite
+# 📰 RSS Feed Reader
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **RSS Feed Reader web app** built using **React**. The app allows users to enter any valid RSS feed URL and view the latest post titles fetched from that feed. It demonstrates working with external XML data, parsing it without third-party RSS libraries, and rendering the results cleanly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔗 Input any RSS feed URL
+- 📄 Fetch and display the post titles
+- ⚙️ XML parsing using DOMParser (no external RSS parser)
+- ⚛️ Built with functional React components
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- React
+- JavaScript
+- HTML/CSS
+- DOMParser API (for parsing RSS feed XML)
+
+---
+
+## 🌐 Live Demo
+
+🔗 [RSS Feed Reader](https://rss-feed-reader-neon.vercel.app/)

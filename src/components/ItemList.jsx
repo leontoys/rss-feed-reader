@@ -13,7 +13,7 @@ const ItemList = ({ items, onClick }) => {
                 return (
                     <a href={link} key={guid} onClick={onClick}>
                         <div className="item">
-                            <h2>{title}</h2>
+                            <h3>{title}</h3>
                             {(summary) && <p>{summary}</p>}
                             {enclosureUrl && (
                                 <audio controls>

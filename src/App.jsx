@@ -14,7 +14,7 @@ function App() {
   const proxyUrl = "https://api.allorigins.win/get" //'https://cors-anywhere.herokuapp.com/' 
 
   //State Variables
-  const [url,setUrl] = useState("")
+  const [url,setUrl] = useState(urls[0])
   const [items,setItems] = useState([]) 
   const [message,setMessage] = useState({message:null,className:""})
 
@@ -47,6 +47,7 @@ function App() {
     //now we need to parse the feed
     const xml = new window.DOMParser().parseFromString(contents,'application/xml')
     //console.log("parsed",xml)
+    console.log(xml.querySelector("title").textContent)
     const items_html = xml.getElementsByTagName("item")//HTML collection
     //console.log("items",items) - this is HTML collection
     const items_array = Array.from(items_html)
@@ -63,10 +64,10 @@ function App() {
   return (
       <div className="card">
         <h1>RSS Feed Reader</h1>
-        <input type='text' value={url} onChange={e=>setUrl(e.target.value)}></input>
+        <input type='text' value={url} 
+               onChange={e=>setUrl(e.target.value)}></input>
         <button type='submit' onClick={handleClick}>Get Posts</button>
         <Notification message={message}></Notification>
-        {/* <Notification message={errorMessage} className="error"></Notification> */}
         <ItemList items={items}/>
       </div>
   )

@@ -19,10 +19,12 @@ body{
 }
 
 .card>input{
+  font-size: 1.1rem;
 }
 
 .card>button{
   width: 50%;
+  font-size: 1.1rem;
   color : wheat;
   background-color: darkgreen;
 }

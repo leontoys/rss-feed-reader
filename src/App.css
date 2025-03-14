@@ -54,3 +54,8 @@
   border: 1px solid gray;
   border-radius: 10px;
 }
+
+.item-list>a{
+  text-decoration: none;
+  color : black;
+}

@@ -6,11 +6,13 @@ const ItemList = ({ items }) => {
         <div className="item-list">
         {
             items.map(item => (
+                <a href="#">
                 <div id={item.getElementsByTagName("guid")[0].textContent} className="item">
                     <h2>{item.getElementsByTagName("title")[0].textContent}</h2>
                     <p>{item.getElementsByTagName("itunes:summary")[0].textContent}</p>
                     <audio controls src={item.getElementsByTagName("enclosure")[0].getAttribute("url")}></audio>
                 </div>
+                </a>
             ))
         }
        </div> 

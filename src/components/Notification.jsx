@@ -1,9 +1,9 @@
 const Notification = ({message})=>{
-    if(message===null){
+    if(message.message===null){
         return null
     }
     return(
-        <div className="error">{message}</div>
+        <div className={message.className}>{message.message}</div>
     )
 }
 

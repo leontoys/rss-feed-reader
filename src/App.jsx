@@ -6,28 +6,35 @@ import Notification from './components/Notification'
 function App() {
 
   //Constants
-  const defaultUrl = 'https://feeds.buzzsprout.com/2289931.rss'
+  const urls = [
+    'https://feeds.buzzsprout.com/2289931.rss',
+    'https://feeds.bbci.co.uk/news/rss.xml',
+    'https://dev.to/feed/geekgalgroks'
+  ]
   const proxyUrl = "https://api.allorigins.win/get" //'https://cors-anywhere.herokuapp.com/' 
 
   //State Variables
   const [url,setUrl] = useState("")
   const [items,setItems] = useState([]) 
-  const [message,setMessage] = useState("")
+  const [message,setMessage] = useState({message:null,className:""})
+
 
   const fetchRSSFeed = async (url)=>{
     try {
     //wait for response
+    setMessage({message:"Fetching Items...",className:"info"})
     const response = await fetch(`${proxyUrl}?url=${encodeURIComponent(url)}`)
     //console.log("response",response)
     //parse
     const json = await response.json()
+    setMessage({message:"",className:""})
     //console.log("json",json)
     //return contents
     return json.contents    
     } catch (error) {
-      console.error("error",error.message)
-      setMessage(error.message)
-      setTimeout(()=>setMessage(""),2000)
+      console.error("error-class",error.message)
+      setMessage({message:error.message,className:"error"})
+      setTimeout(()=> setMessage({message:"",className:""}),2000)
     }
   }
 
@@ -48,8 +55,8 @@ function App() {
       
     } catch (error) {
       console.error("error",error)
-      setMessage(error.message)
-      setTimeout(()=>setMessage(""),2000)
+      setMessage({message:error.message,className:"error"})
+      setTimeout(()=> setMessage({message:"",className:""}),2000)
     }
   }
 
@@ -57,8 +64,9 @@ function App() {
       <div className="card">
         <h1>RSS Feed Reader</h1>
         <input type='text' value={url} onChange={e=>setUrl(e.target.value)}></input>
-        <button type='submit' onClick={handleClick}>Get Feeds</button>
+        <button type='submit' onClick={handleClick}>Get Posts</button>
         <Notification message={message}></Notification>
+        {/* <Notification message={errorMessage} className="error"></Notification> */}
         <ItemList items={items}/>
       </div>
   )

@@ -36,6 +36,13 @@
 
 .card {
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap : 2px;
+}
+
+.card>button{
+  width: 50%;
 }
 
 .read-the-docs {
@@ -58,4 +65,9 @@
 .item-list>a{
   text-decoration: none;
   color : black;
+}
+
+.error{
+  color : red;
+  border-radius: 5px;  
 }

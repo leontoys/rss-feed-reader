@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>DEV Community: Fernando Tricas García</title>
+    <description>The latest articles on DEV Community by Fernando Tricas García (@fernand0).</description>
+    <link>https://dev.to/fernand0</link>
+    <image>
+      <url>https://media2.dev.to/dynamic/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https:%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F346686%2F7bfea1c4-1052-47f7-a336-2e7286783435.jpeg</url>
+      <title>DEV Community: Fernando Tricas García</title>
+      <link>https://dev.to/fernand0</link>
+    </image>
+    <atom:link rel="self" type="application/rss+xml" href="https://dev.to/feed/fernand0"/>
+    <language>en</language>
+    <item>
+      <title>So you would like to digitise your CD collection? (Part 3)</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Sun, 09 Mar 2025 11:56:05 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-3-505f</link>
+      <guid>https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-3-505f</guid>
+      <description>&lt;p&gt;&lt;a href="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fze18q1fm2mwe1d7nzg74.png" class="article-body-image-wrapper"&gt;&lt;img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fze18q1fm2mwe1d7nzg74.png" alt="Image description" width="800" height="458"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After configuring the sound system (&lt;a href="https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-1-4i2m"&gt;So you would like to digitise your CD collection? (Part 1)&lt;/a&gt;) and digitizing the CDs (&lt;a href="https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-2-4ang"&gt;So you would like to digitise your CD collection? (Part 2)&lt;/a&gt;) the time of listening has arrived (well, you know, all the three steps are ocurring almost simultaneously in time: loooking for things, digitizing, listening to the music,... And, shit happens: my old turntable is broken now. It is not involved in the digital part, but it's part of the sound system).&lt;/p&gt;
+
+&lt;p&gt;Looking for info I discovered Logitech Media Server (or, as it is called nowadays &lt;a href="https://lyrion.org/" rel="noopener noreferrer"&gt;Lyrion Music Server&lt;/a&gt; (LMS) as a a streaming audio server supported by the LMS community and formerly supported by Logitech, developed in particular to support their Squeezebox range of digital audio receivers.&lt;/p&gt;
+
+&lt;p&gt;It provides a web interface to your music collection and it can interact with some player. It can be hardware (as the previously named Squeezebox) or it can be software.&lt;br&gt;
+In my case I didn't have access to a hardware device (and I had no interest in getting one) so I decided to test some software. One of the recommended ones was &lt;a href="https://github.com/ralph-irving/squeezelite" rel="noopener noreferrer"&gt;Squeezelite&lt;/a&gt; and it was the one I tried.&lt;br&gt;
+It has a quite ok look and feel, and it can have access to the Lyrion Media Server and send the music to my DAC.&lt;/p&gt;
+
+&lt;p&gt;The LMS is useful for browsing your collection (it shows the pictures related to your disks if you have them, for example), selecting what to play and so on. I've found that they have what they call a material based look and feel that is nice to see. There are two points that are a bit annoying sometimes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;When adding new recordings to your collection (or images, or categories) you need to manually rescan the collection (there is also a pluging that makes the work for you) and it can be slow, from time to time.&lt;/li&gt;
+&lt;li&gt;Sometimes the LMS and squeezelite are not communicating well, so the former does not find the second one and some restarting (software or hardware) is needed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the following part we will talk about some ways to add information to your music files and some odd and ends.&lt;/p&gt;
+
+</description>
+      <category>music</category>
+      <category>digital</category>
+      <category>analog</category>
+      <category>sound</category>
+    </item>
+    <item>
+      <title>So you would like to digitise your CD collection? (Part 2)</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Fri, 31 Jan 2025 15:48:11 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-2-4ang</link>
+      <guid>https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-2-4ang</guid>
+      <description>&lt;p&gt;In part 1 I described the sound system I'm configuring (&lt;a href="https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-1-4i2m"&gt;So you would like to digitise your CD collection? (Part 1)&lt;/a&gt;) and in this part I'm going to show some decisions in the computer part, software,... Some of them can be wrong because I'm not an expert and, if you have knowledge about the topic I would be grateful for you advise.&lt;/p&gt;
+
+&lt;p&gt;I'm using two computers: one for the digitization part (I'm thinking that maybe in the future I will have problems with this: some computers don't include CD reader anymore; we'll hope that there will be some way to buy digital versions of the music). &lt;br&gt;
+This computer runs Linux (&lt;a href="https://fedoraproject.org/workstation/download" rel="noopener noreferrer"&gt;Fedora Workstation 41&lt;/a&gt;) at this moment and I'm not planning to install Windows on it.&lt;/p&gt;
+
+&lt;p&gt;The guy at the shop recommended me to use a lossless format, such as FLAC (Free Lossless Audio Codec) and to pay attention to the encoding: it should be what they call 'bit perfect'. I thought this should be easy because you can read and copy the CDs bit by bit (at the end they contain digital information) but this is not the case (as far as I understand the process now) and he recommended me two programs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.exactaudiocopy.de/" rel="noopener noreferrer"&gt;Exact Audio Copy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dbpoweramp.com/" rel="noopener noreferrer"&gt;dBpoweramp Music Converter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unfortunately, none of them runs on Linux so I had to look for an alternative. &lt;br&gt;
+My finding was:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="https://github.com/whipper-team/whipper" rel="noopener noreferrer"&gt;Whipper&lt;/a&gt;, which according to the webpage 'is a Python 3 (3.6+) CD-DA ripper based on the morituri project (CDDA ripper for *nix systems aiming for accuracy over speed).' ... '&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It depends on some well-know old suspects: cd-paranoia, cdrao, ...&lt;/p&gt;
+
+&lt;p&gt;The use is easy: you just need to put the CD on the reader and issue some command such as: &lt;code&gt;whipper cd rip -C file -k&lt;/code&gt;, where:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;code&gt;-C&lt;/code&gt; option is to get the cover art, if available, and &lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;-k&lt;/code&gt; option means 'continue ripping further tracks instead of giving up if a track can't be ripped' (in case the CD is damaged).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the names of de disc, tracks, artists, and so on it relies on the &lt;a href="https://musicbrainz.org/doc/About" rel="noopener noreferrer"&gt;MusicBrainz&lt;/a&gt; service (and they only use this service, as a &lt;a href="https://github.com/whipper-team/whipper/issues/119" rel="noopener noreferrer"&gt;design choice&lt;/a&gt;). &lt;br&gt;
+It is a wonderful system that knows about most of your records but it is a bit uncomfortable when you have a record they don't know. There can be several situations:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;They have the same record with a different identifier (local editions, reissues, previous issues, ...).&lt;/li&gt;
+&lt;li&gt;They have the same recording, but with a different configuration.&lt;/li&gt;
+&lt;li&gt;They don't have your record, but they have something similar (you need to use the available information, add the new one, ...)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you need to get information about some recording I've found useful another service, which is &lt;a href="https://www.discogs.com/" rel="noopener noreferrer"&gt;Discogs&lt;/a&gt;, a marketplace for buying and selling music and also for keeping a record of your collection.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, whipper relies on the first one to get the record information so you'll have to add the information there (or to your own files, we'll talk later about this) in order to have your CDs nicely organized (unless you are willing to have your filesystems with things such as &lt;code&gt;Unknown Artist - pxZo0oSkApg3XUZAroksJSWxAjk-&lt;/code&gt;  and &lt;code&gt;01. Unknown Artist - Unknown Track 1.flac&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are other problems, due to the collaborative way of including data: you will end having discs with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;'Johan Sebastian Bach'&lt;/li&gt;
+&lt;li&gt;'J.S. Bach', or even&lt;/li&gt;
+&lt;li&gt;'Gustav Leonhardt, La Petite Bande, Tölzer Knabenchor' &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Moreover, you'll have boxes of several discs as parts of bigger collections (so you'll have some music with two discs, numbered 5 and 6), or sets of discs as separated thinks (part 1, 2 and 3 that probably your player does not recognize as a unit).&lt;/p&gt;
+
+&lt;p&gt;Everithing can be improved (or I hope so) and you have a very good starting point for working.&lt;/p&gt;
+
+&lt;p&gt;The conversion process is slow (less than playing the record, anyway, disc by disc) and the system needs some configuration (&lt;a href="https://github.com/whipper-team/whipper?tab=readme-ov-file#getting-started" rel="noopener noreferrer"&gt;Getting Started&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;My second computer is a &lt;a href="https://www.raspberrypi.com/products/raspberry-pi-5/" rel="noopener noreferrer"&gt;Raspberry Pi 5 8Gb&lt;/a&gt; that I bought for some pet projects and which is most of the time in idle state. I got a &lt;a href="https://shop.sandisk.com/es-es/products/ssd/portable-ssd/portable-ssd-sandisk-extreme-pro-usb-3-2?sku=SDSSDE81-1T00-G25" rel="noopener noreferrer"&gt;SanDisk Extreme PRO Portable SSD - 1 TB&lt;/a&gt; (yes, just before Raspberry Pi started selling their own solution) and some powerd USB4 Hub to guarantee the power for the disk (independent from the Raspberry Pi). &lt;/p&gt;
+
+&lt;p&gt;In the third part we will explain the listening part, once we presented the sound system, the proposed way to extract the music from my CDs' collecio.&lt;/p&gt;
+
+</description>
+      <category>music</category>
+      <category>digital</category>
+      <category>analog</category>
+      <category>sound</category>
+    </item>
+    <item>
+      <title>So you would like to digitise your CD collection? (Part 1)</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Sat, 25 Jan 2025 12:54:39 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-1-4i2m</link>
+      <guid>https://dev.to/fernand0/so-you-would-like-to-digitise-your-cd-collection-part-1-4i2m</guid>
+      <description>&lt;p&gt;This is the first part, describing the system I've configured to listen to my music.&lt;/p&gt;
+
+&lt;p&gt;I don't like music streaming services: I find the interfaces very complexes, the recommendation systems not so good and I like to own the music (at the end you are paying for streaming but they can decide at any momento to cancel the service, to drop some music, ...). With films and series is a bit different because I rarely watch a movie more than once or twice. If I do  this, it will be a musical one. I have a nice collection of CDs (more than two hundred) and some vinyl records (around 30 that I bought and a classical music collection that I sort of inherited from a relative). And I've started buying again, after my decision.&lt;/p&gt;
+
+&lt;p&gt;This summer I decided to upgrade my sound system: I had an old micro system with an integrated CD, cassete player and radio. So far so good, not high quality but it was playing my CDs. Moreover, it has an 'AUX' connection that allowed me to hear my discs. I had the turntable repaired one year ago or so after some long time without using it.&lt;/p&gt;
+
+&lt;p&gt;I visited with my wife a specialized shop in my city &lt;a href="https://novomusica.com/" rel="noopener noreferrer"&gt;Novomusica&lt;/a&gt; after trying to improve my original system and they convinced me to start from scratch some decent sound system. My idea was that I didn't want a CD player (at the end, you have a rotating machine that reads the physical information with some lens, it converts it to analog and they you amplify this sound in some way; mechanical parts will break, the lens will have an end...): I was thinking about digitizing my CD collection, and using a computer and a DAC (Digital Analog Converter) to 'play' them. &lt;br&gt;
+After some talk, the configured system was:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="https://www.fiio.com/k11" rel="noopener noreferrer"&gt;FIIO K11 DAC&lt;/a&gt; (some reviews [&lt;a href="https://www.head-fi.org/showcase/fiio-k11.26828/reviews" rel="noopener noreferrer"&gt;1&lt;/a&gt;], [&lt;a href="https://www.audioreviews.org/fiio-k11-r2r-dac-review/" rel="noopener noreferrer"&gt;2&lt;/a&gt;], [&lt;a href="https://www.techpowerup.com/review/fiio-k11-r2r-desktop-dac-headphone-amplifier/" rel="noopener noreferrer"&gt;3&lt;/a&gt;]).
+&lt;img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzmdpdq9y5awi6gyl23cn.jpg" alt="The FIIO K11" width="800" height="1062"&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="https://nadelectronics.com/product/c-316bee-v2-stereo-integrated-amplifier/" rel="noopener noreferrer"&gt;NAD C 316BEE V2 integrated amplifier&lt;/a&gt; (some reviews [&lt;a href="https://www.whathifi.com/nad/c316bee/review" rel="noopener noreferrer"&gt;1&lt;/a&gt;] [&lt;a href="https://www.tonepublications.com/review/nad-c316-bee-integrated-amplifier/" rel="noopener noreferrer"&gt;2&lt;/a&gt;], [&lt;a href="https://www.ecoustics.com/reviews/nad-c-316bee-v2-integrated-amplifier/" rel="noopener noreferrer"&gt;3&lt;/a&gt;])
+&lt;img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzsq2oktc8p2jw9ix7god.jpg" alt="NAD amplifier" width="800" height="1062"&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="https://www.dali-speakers.com/en/products/spektor/spektor-2/" rel="noopener noreferrer"&gt;Dali SPEKTOR 2 compact bookshelf speakers&lt;/a&gt; (some reviews [&lt;a href="https://www.whathifi.com/dali/spektor-2/review" rel="noopener noreferrer"&gt;1&lt;/a&gt;] [&lt;a href="https://perfectacoustic.co.uk/dali-spektor-2/" rel="noopener noreferrer"&gt;2&lt;/a&gt;] [&lt;a href="https://easyhometheater.net/dali-spektor-2-review-bookshelf-speakers" rel="noopener noreferrer"&gt;3&lt;/a&gt;]).
+&lt;img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1bunu7ssgiqpfhdg3sep.jpg" alt="Dali SPEKTOR 2" width="800" height="1062"&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The amplifier and the speakers were conneted by some  &lt;a href="https://www.vandenhul.com/product-category/cables/" rel="noopener noreferrer"&gt;Van der Hul&lt;/a&gt; O.F.C (Oxygen-Free Copper) cables.&lt;/p&gt;
+
+&lt;p&gt;For the vinyls I'm keeping, for the moment, my old turntable:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="https://archive.org/details/manual_APA305C_SM_AKAI_EN" rel="noopener noreferrer"&gt;AKAI AP-A305 belt-drive turntable (internet archive link to the manual&lt;/a&gt; (No reviews, you can find several second-hand units in several sites for under 50$, and there are some spare parts for repairing available).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The turntable needs some preamp to boosts its signal to a level that can be properly processed by the amplifier and the old one I had was not working well so I bought (in Amazon):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="https://fosiaudio.com/products/fosi-audio-phono-preamp-for-turntable-preamplifier-mm-phonograph-preamplifier-with-gain-gear-mini-stereo-audio-hi-fi-pre-amplifier-for-record-player-with-dc-12v-power-box-x2" rel="noopener noreferrer"&gt;Fosi Audio Box X2 Phono Preamp&lt;/a&gt;, more for the price (at that moment I was just trying to amplify my turntable to be played with my old system) and the fancy valves than other considerations (there were, anyway, some good reviews [&lt;a href="https://fosiaudio.com/products/fosi-audio-phono-preamp-for-turntable-preamplifier-mm-phonograph-preamplifier-with-gain-gear-mini-stereo-audio-hi-fi-pre-amplifier-for-record-player-with-dc-12v-power-box-x2" rel="noopener noreferrer"&gt;1&lt;/a&gt;] [&lt;a href="https://www.yoursoundmatters.com/fosi-audio-box-x2-phono-preamp-review/" rel="noopener noreferrer"&gt;2&lt;/a&gt;], [&lt;a href="https://avgadgets.com/fosi-audiobox-x2-phono-pre-amplifier-review/" rel="noopener noreferrer"&gt;3&lt;/a&gt;]).
+&lt;img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fskbis8h4xxaon34gh6v4.jpg" alt="Fosi audio X2" width="800" height="1062"&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notice that the amplifier has an integrated preamp, so this part would not be needed. I'm keeping it for the moment because of the cables and because I'm deciding yet the final configuration (position of the things in my place).&lt;/p&gt;
+
+&lt;p&gt;The result? The system sounds more than ok (but remember my starting point) and I'm using it almost every day because I love hearing music when I'm working, or just doing some thing or relaxing.&lt;/p&gt;
+
+&lt;p&gt;This is a bit long now, so I will continue with a second part soon. Just as a teaser, some keywords: raspberry pi, 'bit perfect' encoding, lossless formats, Linux,...&lt;/p&gt;
+
+</description>
+      <category>music</category>
+      <category>digital</category>
+      <category>analog</category>
+      <category>sound</category>
+    </item>
+    <item>
+      <title>So, you want to publish in Bluesky with a python program?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Thu, 02 Nov 2023 19:04:43 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-to-publish-in-bluesky-with-a-python-program-3bea</link>
+      <guid>https://dev.to/fernand0/so-you-want-to-publish-in-bluesky-with-a-python-program-3bea</guid>
+      <description>&lt;p&gt;Bluesky is a microblogging social platform that has been available for aproximately a year. Currently, access is by invitation only, but invitations are becoming more readily available. If you don't have one yet, you should receive one soon.&lt;/p&gt;
+
+&lt;p&gt;In my quest to experiment with the platform, I aimed to publish posts programmatically. I stumbled upon a helpful resource, &lt;a href="https://atproto.com/blog/create-post"&gt;Posting via the Bluesky API,&lt;/a&gt;  which guided me in getting started.&lt;/p&gt;
+
+&lt;p&gt;Bluesky utilizes &lt;a href="https://atproto.com/"&gt;the AT protocol&lt;/a&gt; so I conducted a quick search to find a Python implementation of it, available at &lt;a href="https://github.com/MarshalX/atproto"&gt;atproto&lt;/a&gt;. You can install it on your system using the usual method:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;pip install -U atproto
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Once installed, you can start posting using the appropriate code. For instance, you can post a text message with a line like this:&lt;/p&gt;
+
+&lt;p&gt;You can post a text message with some line such as:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;client.send_post(text='Hello World!')
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;provided, of course, that you are authenticated, and so on.&lt;/p&gt;
+
+&lt;p&gt;However, I wanted to publish text with links, and simply writing a URL in your text won't automatically create a link:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://res.cloudinary.com/practicaldev/image/fetch/s--1IMX-aoF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o0xi80f6d19ja9cjdnj7.png" class="article-body-image-wrapper"&gt;&lt;img src="https://res.cloudinary.com/practicaldev/image/fetch/s--1IMX-aoF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o0xi80f6d19ja9cjdnj7.png" alt="Example of publication in Bluesky, with link not interpreted and then, as a reply, with the link interpreted" width="606" height="359"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To achieve this, I needed to do some research. You can see the difference in the reply between having a link and not having one. You can include additional information when you write by using what they call 'facets.' For adding a link, you can use the  &lt;code&gt;AppBskyRichtextFacet&lt;/code&gt;, which allows you to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add a uri&lt;/li&gt;
+&lt;li&gt;Specify the start and end indices of the URI in your text&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For example, if you want to insert some text before your URI, you can do something like this:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;models.AppBskyRichtextFacet.Main(
+            features=[models.AppBskyRichtextFacet.Link(uri=uri)],
+            index=models.AppBskyRichtextFacet.ByteSlice(byte_start=len(text)+1,
+                                                        byte_end=len(text)+len(uri)+1),
+            )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Note that you are specifying the position where your URI begins and ends. You can append it to your list of facets and send it as text to your Bluesky account.&lt;/p&gt;
+
+&lt;p&gt;You can see the complete program at:&lt;/p&gt;
+
+
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;from atproto import Client, models
+
+
+def main():
+    client = Client()
+    password = input("Password? ")
+    profile = client.login('fernand0.bsky.social', password)
+    print('Welcome,', profile.display_name)
+
+    facets =  []
+
+    text = 'Mi GitHub:'
+    uri = 'http://github.com/fernand0'
+    facets.append(
+            models.AppBskyRichtextFacet.Main(
+                features=[models.AppBskyRichtextFacet.Link(uri=uri)],
+                index=models.AppBskyRichtextFacet.ByteSlice(byte_start=len(text)+1,
+                                                            byte_end=len(text)+len(uri)+1),
+                )
+            )
+
+    text = f"{text} {uri}"
+    response = client.com.atproto.repo.create_record(
+        models.ComAtprotoRepoCreateRecord.Data(
+            repo=client.me.did,
+            collection=models.ids.AppBskyFeedPost,
+            record=models.AppBskyFeedPost.Main(created_at=client.get_current_time_iso(), text=text, facets=facets),
+        )
+    )
+    print(f"Response: {response}")
+
+
+if __name__ == '__main__':
+    main()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;p&gt;You can download the code in this &lt;a href="https://gist.github.com/fernand0/6e099c1049f74cbb3151f6f7cc3163e5"&gt;publish in bluesky gist&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+      <category>python</category>
+      <category>bluesky</category>
+      <category>atprotocol</category>
+      <category>posse</category>
+    </item>
+    <item>
+      <title>So, you want to refresh thumbnails in nautilus?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Wed, 09 Aug 2023 10:46:09 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-to-refresh-thumbnails-in-nautilus-3n8o</link>
+      <guid>https://dev.to/fernand0/so-you-want-to-refresh-thumbnails-in-nautilus-3n8o</guid>
+      <description>&lt;p&gt;From time to time some of your photos gets corrupted. In these cases nautilus is not able to compute a thumnail and shows some standard empty image.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://media.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faxn1xeee77yb071bi330.png" class="article-body-image-wrapper"&gt;&lt;img src="https://media.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faxn1xeee77yb071bi330.png" alt="Image description"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Since you are a cautious person, you have a backup and you can restore the picture, but .... Nautilus will not show the new thumbnai. How to solve this?&lt;/p&gt;
+
+&lt;p&gt;The solution is to look for the place where nautilus stores these thumbnails, in my case, in a Fedora system:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt; rm -r .cache/thumbnails/fail/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Then, you can restart nautilus and you will see the new (old) thumbnails.&lt;/p&gt;
+
+&lt;p&gt;I found the solution for this problem at: &lt;a href="https://askubuntu.com/questions/1057/refresh-thumbnails-in-nautilus" rel="noopener noreferrer"&gt;Refresh thumbnails in nautilus&lt;/a&gt; with a solution for Ubuntu.&lt;/p&gt;
+
+</description>
+      <category>thumbnails</category>
+      <category>pictures</category>
+      <category>nautilus</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>So, yo wan to build a personal aggregator with Jekyll?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Sun, 06 Nov 2022 17:05:22 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-yo-wan-to-build-a-personal-aggregator-with-jekyll-ia3</link>
+      <guid>https://dev.to/fernand0/so-yo-wan-to-build-a-personal-aggregator-with-jekyll-ia3</guid>
+      <description>&lt;p&gt;With the last upgrade of my computer (Hello jammy!) the tool I was using to maintain my personal aggregator started to fail. I was happily using an unmaintained tool that provided a way to have a personal home page collecting my activity on the net and joining it together.&lt;br&gt;
+The concept of personal aggregator comes from the &lt;a href="https://en.wikipedia.org/wiki/News_aggregator"&gt;news aggregator&lt;/a&gt; or Feed reader. It is also related with the &lt;a href="https://en.wikipedia.org/wiki/Planet_(software)"&gt;Planet&lt;/a&gt; concept, in the sense that it generates a page with selected content giving some sense of community or relationship.&lt;br&gt;
+There are some commercial products. such as: &lt;a href="https://linktr.ee/"&gt;Linktree&lt;/a&gt;, to name one that is quite popular nowadays or &lt;a href="https://about.me/"&gt;about.me&lt;/a&gt; to remember some older contenders.&lt;/p&gt;
+
+&lt;p&gt;But where is the fun when you use the tools that other provide?&lt;/p&gt;
+
+&lt;p&gt;I was using &lt;a href="https://github.com/haschek/PubwichFork"&gt;PubWichFork&lt;/a&gt;, by Michael Haschke, which provided a way to generate the page sometimes (mainly at some times and/or when somebody visited it) and had a nice template and layout (later more on this). The last commit is fro 2019 and, as I said above, it had some error that I do not wanted to debug (I'm not very good at PHP programming).&lt;/p&gt;
+
+&lt;p&gt;I did some quick searches to check for alterantives, but I did not find any interesting alternative so I asked myself if it would make sense to try to program my own thing, with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="https://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; I've been preparing several sites during last months and I feel quite comfortable with them: look for a template, modify it, put your content and go on.&lt;/li&gt;
+&lt;li&gt;My own &lt;a href="https://github.com/fernand0/socialModules"&gt;socialModules&lt;/a&gt;. I've got a set of tools to consume content from some sites (RSS in this case, but also Twitter, the raising star Mastodon, ....) and then manage them in an homogeneous way. In this case it would be just downloading the content, selecting title and links, ...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the presentation part I selected the &lt;a href="https://github.com/sharu725/cards"&gt;cards&lt;/a&gt; template, by Sharath Kumar. The reason was that this template provides a grid-like aspect, which I think is the more adequate to present the content in my aggregator. You can see the example page in: &lt;a href="https://cards.webjeda.com/"&gt;Cards example&lt;/a&gt;.&lt;br&gt;
+Some modifications were needed (and maybe some more will be done) because it is a porfolio oriented site and, in our case, we do not need pagination, for example.&lt;/p&gt;
+
+&lt;p&gt;The images are not needed, neither. I would like to have a compact site and images can make the page more attractive, but each post is bigger than needed.&lt;br&gt;
+Finally (for the moment, more decissions will come) the colors: as I said before the previous publishing system had a nice template and I wanted to maintain theoriginal aspect. This is easy to do because Jekyll provides a way to include a &lt;strong&gt;_custom.css&lt;/strong&gt; style sheet, and I could reuse the old one.&lt;/p&gt;
+
+&lt;p&gt;For the content my idea was to set a set of posts which contain the titles and links  of the selected site. For example, for this site you can see the following image:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://res.cloudinary.com/practicaldev/image/fetch/s--a21Lw9Q5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lvxdgwdesblym5hd49ni.png" class="article-body-image-wrapper"&gt;&lt;img src="https://res.cloudinary.com/practicaldev/image/fetch/s--a21Lw9Q5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lvxdgwdesblym5hd49ni.png" alt="dev.to section" width="387" height="448"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The program to generate the content is quite easy: for each site you read the original content, select the parts you want to publish and generate a post (for the &lt;strong&gt;_posts&lt;/strong&gt; that will be presented using the format provide by your template.&lt;/p&gt;
+
+&lt;p&gt;We have added categories to the posts in order to be able to present them in an adquate way: this is an idea that comes from PubWichFork, where the headers of each section were shown with the colors of the site. For example, the Twitter color is (as shown in &lt;a href="http://brandcolors.net/"&gt;BrandColors&lt;/a&gt;):&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;color: #55acee;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Since this is not a dynamic approach (as a PHP based one would be), we need to setup some cron job that generates the posts, builds the site and publish once each hour (for example).&lt;/p&gt;
+
+&lt;p&gt;I'm thinking that, maybe, I could have used some templating system, since you do not need the features of a complete site construction infrastructure as Jekyll, but I didn't found something like this available, and I was more familiar with the CMS approach.&lt;/p&gt;
+
+&lt;p&gt;So far, so good. This has been a presentation of some introductory ideas of a small project.&lt;/p&gt;
+
+&lt;p&gt;You can visit the result at &lt;a href="https://elmundoesimperfecto.com/"&gt;El Mundo Es Imperfecto&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://res.cloudinary.com/practicaldev/image/fetch/s--ldcalBjB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mqqa7dbymuxv1fu18932.png" class="article-body-image-wrapper"&gt;&lt;img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ldcalBjB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mqqa7dbymuxv1fu18932.png" alt="El Mundo Es Imperfecto image" width="880" height="431"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The program that generates the posts is &lt;a href="https://github.com/fernand0/scripts/blob/master/personalAggregator.py"&gt;personalAggregator.py&lt;/a&gt; (it needs to install &lt;a href="https://github.com/fernand0/socialModules"&gt;socialModules&lt;/a&gt;'s dist branch with its requirements:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;pip install social-modules@git+ssh://git@github.com/fernand0/socialModules@dist 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Some configuration is needed, please, read the code.&lt;/p&gt;
+
+&lt;p&gt;Finally, the &lt;a href="https://github.com/fernand0/personalAggregator"&gt;personal aggregator&lt;/a&gt;'s Jekyll site needs to be cloned and adapted.&lt;/p&gt;
+
+&lt;p&gt;Some more configuration is needed to build the site (calling  &lt;code&gt;personalAggregator.py&lt;/code&gt;) and then &lt;code&gt;jeyll build&lt;/code&gt;. There is a shell script in &lt;code&gt;_bin&lt;/code&gt; directory that will work with some adaptation.&lt;/p&gt;
+
+</description>
+      <category>jekyll</category>
+      <category>personal</category>
+      <category>aggregator</category>
+      <category>homepage</category>
+    </item>
+    <item>
+      <title>So, you want a RSS feed with the activity in GitHub?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Thu, 13 Oct 2022 16:14:37 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-a-rss-feed-with-the-activity-in-github-2pa8</link>
+      <guid>https://dev.to/fernand0/so-you-want-a-rss-feed-with-the-activity-in-github-2pa8</guid>
+      <description>&lt;p&gt;If you wanted to publish your activity in GitHub somewhere and your preferred way was to read an old, friendly RSS feed, I have some not so good news for you. &lt;/p&gt;
+
+&lt;p&gt;It is possible to get and RSS feed, but you need to send the adequate headers, as stated in &lt;a href="https://docs.github.com/en/rest/activity/feeds"&gt;Feeds&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;curl -H "Accept: application/atom+xml" https://github.com/security-advisories
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;This means that it won't be easy to get these feeds in your feedreader (as far as I know they won't allow to modify headers and, for example, the excellent &lt;a href="https://feedly.com/"&gt;Feedly&lt;/a&gt; does not use this trick). &lt;/p&gt;
+
+&lt;p&gt;But if you want to insert this in a program it should be easy to do (in Python, for example, you could use &lt;a href="https://pythonhosted.org/feedparser/"&gt;feedparser&lt;/a&gt; module and, in &lt;a href="https://pythonhosted.org/feedparser/http-other.html#sending-custom-http-request-headers"&gt;Other HTTP Headers&lt;/a&gt; they explain how to do it).&lt;/p&gt;
+
+&lt;p&gt;For example, for the activity of yours truly, you could use:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;d = feedparser.parse('http://github.com/fernand0', request_headers={'Accept':'application/atom+xml'})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Et voilà:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;d.entries
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;has the content available in the feed.&lt;/p&gt;
+
+&lt;p&gt;Let me know if this is of some utility for you. &lt;/p&gt;
+
+</description>
+      <category>rss</category>
+      <category>feed</category>
+      <category>github</category>
+      <category>activity</category>
+    </item>
+    <item>
+      <title>So, you want to control your android from your linux desktop?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Fri, 21 Jan 2022 17:03:53 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-to-control-your-android-from-your-linux-desktop-3lan</link>
+      <guid>https://dev.to/fernand0/so-you-want-to-control-your-android-from-your-linux-desktop-3lan</guid>
+      <description>&lt;p&gt;I'm usually in front of a Linux desktop computer but I'm using an Android tablet to listen to some music and so on. The problem is that when you want to switch applications of select another web, or video, you have to go to the tablet, and touch it; this is not very comfortable when you have your hands (and eyes) in the computer.&lt;br&gt;
+There are some solutions for remote desktop management. See, for example, &lt;a href="https://www.androidauthority.com/how-to-remote-control-android-device-41969/"&gt;How to remote control one Android device with another&lt;/a&gt;, but they look a bit complicated for me and (did't check all) they do not have Linux clients.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://res.cloudinary.com/practicaldev/image/fetch/s--cCWW8HPa--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3zui7kv4jv5sci6uxt6f.png" class="article-body-image-wrapper"&gt;&lt;img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cCWW8HPa--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3zui7kv4jv5sci6uxt6f.png" alt="Writing this post while seeing the tablet with a YouTube video" width="880" height="512"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Fortunately I discovered &lt;a href="https://cialu.net/display-and-control-your-android-device-from-linux-desktop/"&gt;Display and control your Android device from Linux desktop&lt;/a&gt; where you can learn about &lt;a href="https://github.com/Genymobile/scrcpy"&gt;scrcpy&lt;/a&gt; which helps to solve the problem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This application provides display and control of Android devices connected via USB (or over TCP/IP). It does not require any root access. It works on GNU/Linux, Windows and macOS.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can install it (in my Fedora): &lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ sudo dnf copr enable zeno/scrcpy
+
+$ sudo dnf install scrcpy 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Then, you need &lt;a href="https://documentation.meraki.com/SM/Device_Enrollment/Enabling_Device_Owner_Mode_using_Android_Debug_Bridge_(ADB)"&gt;Enabling Device Owner Mode using Android Debug Bridge (ADB)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Settings&lt;/li&gt;
+&lt;li&gt;Go to “About device” (Might be named slightly different)&lt;/li&gt;
+&lt;li&gt;Click the “Build number” field 7 times. This will turn on “Developer options”&lt;/li&gt;
+&lt;li&gt;Go back to Settings&lt;/li&gt;
+&lt;li&gt;Go to “Developer options”&lt;/li&gt;
+&lt;li&gt;Scroll down and enable “USB debugging”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then you can connect to the devide via an USB cable or (my preferred option), via TCP/IP. In this case, you can follow: &lt;a href="https://developer.android.com/studio/command-line/adb.html#wireless"&gt;Connect to a device over Wi-Fi (Android 10 and lower)&lt;/a&gt;.&lt;br&gt;
+First you'll need to connect via USB and type:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;adb tcpip 5555
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Secondly, you'll need to know your IP: Settings &amp;gt; About tablet (or About phone) &amp;gt; Status &amp;gt; IP address. Or, on a Wear OS device, you can find the IP address at Settings &amp;gt; Wi-Fi Settings &amp;gt; Advanced &amp;gt; IP address. &lt;/p&gt;
+
+&lt;p&gt;Finally, you'll connect to the android device:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;adb connect device_ip_address:5555
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;And lauch the program:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;scrcpy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;The only limitation I can see is when the tablet goes to sleep mode for energy saving, you need to touch it again in order to recover control from your computer.&lt;/p&gt;
+
+&lt;p&gt;Hope this helps. Next step, controlling the tablet from the command line? :-)&lt;/p&gt;
+
+</description>
+      <category>linux</category>
+      <category>android</category>
+      <category>remote</category>
+      <category>management</category>
+    </item>
+    <item>
+      <title>So, you want to restart the sound system in Fedora?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Thu, 28 Oct 2021 11:16:58 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-to-restart-the-sound-system-in-fedora-51pa</link>
+      <guid>https://dev.to/fernand0/so-you-want-to-restart-the-sound-system-in-fedora-51pa</guid>
+      <description>&lt;p&gt;For the first time in a long time some process (&lt;em&gt;Teams&lt;/em&gt; ehem, ehem, ...) was making some annoying sound and there was no way to stop it. So, I decided to restart the sound system. &lt;br&gt;
+The problem? Fedora switched from &lt;em&gt;pulseaudio&lt;/em&gt; to &lt;em&gt;pipewire&lt;/em&gt; &lt;a href="https://blog.desdelinux.net/en/fedora-34-planea-usar-pipewire-para-sonido-en-lugar-de-pulseaudio/"&gt;Fedora 34 plans to use PipeWire for sound instead of PulseAudio&lt;/a&gt;. The net is plenty of information about &lt;code&gt;restarting sound subsystem&lt;/code&gt; referring to pulseaudio. &lt;br&gt;
+Once I've discovered this change, it has been easy to discover the way to restar it and I'm documenting it here, just in case it is useful for somebody. You can type, as user (no sudo needed):&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt; systemctl --user restart pipewire^C
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;And you're done: the annoying sound disappeared.&lt;/p&gt;
+
+</description>
+      <category>sound</category>
+      <category>linux</category>
+      <category>fedora</category>
+      <category>pipewire</category>
+    </item>
+    <item>
+      <title>So, you want to delete old log files in your Fedora system?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Sat, 02 Oct 2021 09:41:25 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-to-delete-old-log-files-in-your-fedora-system-37ne</link>
+      <guid>https://dev.to/fernand0/so-you-want-to-delete-old-log-files-in-your-fedora-system-37ne</guid>
+      <description>&lt;p&gt;&lt;a href="https://res.cloudinary.com/practicaldev/image/fetch/s--NS_kJ60N--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://live.staticflickr.com/2448/3765903082_4917c2dd9b.jpg" class="article-body-image-wrapper"&gt;&lt;img src="https://res.cloudinary.com/practicaldev/image/fetch/s--NS_kJ60N--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://live.staticflickr.com/2448/3765903082_4917c2dd9b.jpg" alt="Some old hard drives"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In my system the log space was getting big (more than 4Gb). Since nowadays we have these small solid state disks this can be a problem. &lt;/p&gt;
+
+&lt;p&gt;I checked &lt;a href="https://unix.stackexchange.com/questions/130786/can-i-remove-files-in-var-log-journal-and-var-cache-abrt-di-usr"&gt;Can I remove files in /var/log/journal and /var/cache/abrt-di/usr?&lt;/a&gt; and this instruction does the magic:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;sudo journalctl --vacuum-size=500M&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Moreover, you can activate log rotation with:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;sudo systemctl kill --kill-who=main --signal=SIGUSR2 systemd-journald.service&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and you'll need to restart the service:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;sudo systemctl restart systemd-journald.service&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finally, if you want to check the size of your journaling logging space: &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;journalctl --disk-usage&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Or, in the old-fashioned (and more 'physical') way:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;du -h /var/log/journal/&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;No more complaints about the size of the root filesystem, for now.&lt;/p&gt;
+
+</description>
+      <category>fedora</category>
+      <category>log</category>
+      <category>system</category>
+      <category>diskspace</category>
+    </item>
+    <item>
+      <title>So, you want to launch several threads in Python and something does not work?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Mon, 19 Jul 2021 17:22:40 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-to-launch-several-threads-in-python-and-something-does-not-work-193d</link>
+      <guid>https://dev.to/fernand0/so-you-want-to-launch-several-threads-in-python-and-something-does-not-work-193d</guid>
+      <description>&lt;p&gt;&lt;a href="https://www.flickr.com/photos/fernand0/415859306/" title="Hilos de colores "&gt;&lt;img src="https://res.cloudinary.com/practicaldev/image/fetch/s--qTI6M2Ff--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/http://live.staticflickr.com/52/415859306_e77c449fd3.jpg" alt="Hilos de colores "&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I was refactoring some program and I discovered that my concurrence was not working well: I programmed some &lt;code&gt;concurrent.futures.ThreadPoolExecutor&lt;/code&gt; tasks but some of them were waiting until the others finished.&lt;br&gt;
+This was a problem because the program was launched once each hour and it was not finishing in time for the next run. I had the program running several times (not a problem of concurrency since it is mostly well behaved, but definitely a non desirable way of working).&lt;/p&gt;
+
+&lt;p&gt;The problem? Well, these methods (&lt;code&gt;ThreadPoolExecutor&lt;/code&gt;, &lt;code&gt;ProcessPoolExecutor&lt;/code&gt;, ...)   have a &lt;code&gt;max_workers&lt;/code&gt; limit which is defined as follows:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Changed in version 3.8: Default value of max_workers is changed to min(32, os.cpu_count() + 4). This default value preserves at least 5 workers for I/O bound tasks. It utilizes at most 32 CPU cores for CPU bound tasks which release the GIL. And it avoids using very large resources implicitly on many-core machines.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The machine where this program is running is a cheap 1 vCPU machine, and this is a problem. However, my processes are very light, they just do some input, wait some time, do some output and that's all.&lt;/p&gt;
+
+&lt;p&gt;The solution? You can count (or at least, have some idea about it) the number of threads and set an adequate value for this &lt;code&gt;max_workers&lt;/code&gt; parameter.&lt;/p&gt;
+
+&lt;p&gt;In my case:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;with concurrent.futures.ThreadPoolExecutor(max_workers=75) as pool:
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;That is, 75 workers. As stated previously I have no problems with these processes and this allows the program to run all of them in a concurrent way.&lt;/p&gt;
+
+</description>
+      <category>python</category>
+      <category>threading</category>
+      <category>programming</category>
+    </item>
+    <item>
+      <title>So, you want to call a program from vim?</title>
+      <dc:creator>Fernando Tricas García</dc:creator>
+      <pubDate>Fri, 23 Apr 2021 08:07:53 +0000</pubDate>
+      <link>https://dev.to/fernand0/so-you-want-to-call-a-program-from-vim-of9</link>
+      <guid>https://dev.to/fernand0/so-you-want-to-call-a-program-from-vim-of9</guid>
+      <description>&lt;p&gt;Sometimes I'm editing a file and I need some part of the results of executing some program:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt; [myMachine] &amp;gt; ~/somePath/someProgram someArgument | tee /somePlace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;In &lt;a href="https://stackoverflow.com/questions/2627886/how-do-i-run-a-c-program-from-vim"&gt;How do I run a C program from VIM?&lt;/a&gt; they tell us:&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;:!~/somePath/someProgram someArgument | tee /somePlace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;And it works.&lt;/p&gt;
+
+</description>
+      <category>vim</category>
+      <category>programs</category>
+      <category>tips</category>
+    </item>
+  </channel>
+</rss>

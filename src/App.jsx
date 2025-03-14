@@ -68,6 +68,7 @@ function App() {
                onChange={e=>setUrl(e.target.value)}></input>
         <button type='submit' onClick={handleClick}>Get Posts</button>
         <Notification message={message}></Notification>
+        
         <ItemList items={items}/>
       </div>
   )
